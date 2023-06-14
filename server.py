@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='static')
 def main():
     print(request.form)
     if request.method == 'GET':  # qlq lit les informations HTML
-        print("quelqu'un à ouvert la page")
+        print("quelqu'un à ouvert les pages")
         return render_template('/Connexion.html')
     else:
         print("quelqu'un à envoyé des informations")  # Le serveur recoit des informations
