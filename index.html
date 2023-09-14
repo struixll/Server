@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+</head>
+<body>
+    <h1>Timer</h1>
+    <div id="timer">0:00</div>
+
+    <script>
+        var seconds = 0;
+        var minutes = 0;
+
+        function updateTimer() {
+            seconds++;
+            if (seconds == 60) {
+                seconds = 0;
+                minutes++;
+            }
+
+            var timerElement = document.getElementById("timer");
+            timerElement.textContent = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
